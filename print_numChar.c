@@ -13,7 +13,10 @@ int _printf(const char *format, ...)
 	check ch[] = {
 		{"%c", print_char},
 		{"%s", print_str},
-		{"%%", print_percent}
+		{"%%", print_percent},
+		{"%d", print_int},
+		{"%i", print_dec},
+		{"%b", print_bin}
 	};
 
 	int b = 0;
@@ -28,7 +31,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[b] != '\0')
 	{
-		x = 2;
+		x = 5;
 
 		while (x >= 0)
 		{
